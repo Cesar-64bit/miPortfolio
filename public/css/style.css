@@ -167,3 +167,49 @@ footer {
     padding: 1rem;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        margin-left: 0.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .cards-container {
+        padding: 10px;
+    }
+
+    .card {
+        width: 70%;
+        height: auto;
+    }
+
+    .card__title {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    .card__text {
+        font-size: 14px;
+    }
+
+    .card__content {
+        width: 100%;
+        height: auto;
+    }
+
+    .card__button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
