@@ -212,4 +212,8 @@ footer {
         font-size: 14px;
         padding: 8px;
     }
+
+    p {
+        font-size: 80%;
+    }
 }
