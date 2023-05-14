@@ -28,9 +28,7 @@ h1 {
 nav {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: flex-end;
+    padding: 1rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -51,6 +49,63 @@ nav a:hover {
     background-color: white;
     color: #333;
 }
+
+.menu-toggle {
+    display: block;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    display: none;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+/* Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle .menu-icon {
+        display: block;
+        float: right;
+    }
+
+    #menu-checkbox:checked~.menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+        width: 100%;
+    }
+
+    #menu-checkbox:checked~.menu li {
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+}
+
 
 main {
     max-width: 800px;
@@ -166,49 +221,4 @@ footer {
     color: white;
     padding: 1rem;
     text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    nav {
-        justify-content: center;
-    }
-
-    nav a {
-        margin-left: 0.5rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    main {
-        padding: 1rem;
-    }
-
-    .cards-container {
-        padding: 10px;
-    }
-
-    .card__title {
-        font-size: 20px;
-        margin: 5px 0;
-    }
-
-    .card__text {
-        font-size: 14px;
-    }
-
-    .card__content {
-        width: 100%;
-        height: auto;
-    }
-
-    .card__button {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    p {
-        font-size: 80%;
-    }
 }

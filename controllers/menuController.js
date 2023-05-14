@@ -28,8 +28,15 @@ const paginaAprender = (req, res) => {
     });
 };
 
+const paginaExercises = (req, res) => {
+    res.render('main/exercises.html', {
+        title: "Exercises"
+    });
+};
+
 export {
     paginaSobreMi,
     paginaPortfolio,
-    paginaAprender
+    paginaAprender,
+    paginaExercises
 };
